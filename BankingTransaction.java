@@ -52,7 +52,8 @@ public class BankingTransaction {
             System.out.println();
             System.out.println();
             withdraw();
-        }else System.out.println("Your Account don't have sufficient Balance");
+        }else System.out.println("Your don't have sufficient Balance in your Account");
+        System.out.println();
     }
     public static void accountSummary(){
         System.out.println("Your Account Balance is $ "+ accountBalance);
