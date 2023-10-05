@@ -42,18 +42,17 @@ public class BankingTransaction {
         Scanner scn = new Scanner(System.in);
         System.out.println("Enter the amount you want to Withdraw");
         int amount=scn.nextInt();
-        if(amount>0)
+        if(amount>0 && accountBalance>=amount)
         {accountBalance-=amount;
             amountWithdrawCount +=amount;
             withdrawCount++;
             System.out.println("Your current Account Balance is $ "+ accountBalance);}
-        else {
-            System.out.println("Please enter a valid amount for Deposit");
+        else if(amount<=0) {
+            System.out.println("Please enter a valid amount for withdraw ");
             System.out.println();
             System.out.println();
             withdraw();
-        }
-        
+        }else System.out.println("Your Account don't have sufficient Balance");
     }
     public static void accountSummary(){
         System.out.println("Your Account Balance is $ "+ accountBalance);
